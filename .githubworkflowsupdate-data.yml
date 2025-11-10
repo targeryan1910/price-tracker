@@ -1,31 +1,27 @@
-name: Update N11 Prices
+name: Update Product Prices
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Her 6 saatte bir çalışacak
-  workflow_dispatch:  # Manuel tetikleme için
+    - cron: '0 */6 * * *' # Her 6 saatte bir çalışacak
+  workflow_dispatch: # Manuel tetikleme
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
-
+          node-version: '20'
       - name: Install dependencies
         run: npm install puppeteer
-
       - name: Run scraper
         run: node scraper.js
-
-      - name: Commit & push data.json
+      - name: Commit data.json
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add data.json
-          git commit -m "Update prices [skip ci]" || echo "No changes"
+          git commit -m "Update prices [ci skip]" || echo "No changes"
           git push
