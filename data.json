@@ -1,92 +1,16 @@
 [
   {
-    "title": "MSI MAG FORGE 100M Temperli Cam ARGB Kasa",
+    "name": "MSI MAG Forge 100M Temperli Cam Kasa",
     "link": "https://www.n11.com/urun/msi-mag-forge-100m-temperli-cam-2x120mm-1x120mm-argb-fan-psu-yok-gaming-siyah-kasa-59165498",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025-11-10T00:00:00"
+    "price": 0,
+    "oldPrice": null,
+    "updatedAt": null
   },
   {
-    "title": "Vento VG3400S 650W 80+ PSU Gaming Kasa",
+    "name": "Vento VG3400S 650W PSU Gaming Kasa",
     "link": "https://www.n11.com/urun/vento-vg3400s-650w-80-psu-gaming-kasa-74763052",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025-11-10T00:00:00"
-  },
-  {
-    "title": "Hiper Zoe Gaming Rainbow Mid‑ATX 750W 80+ Bronz PSU Kasa",
-    "link": "https://www.n11.com/urun/hiper-zoe-gaming-rainbow-mid-atx-750w-80-bronz-psu-kasa-57557871",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025-11-10T00:00:00"
-  },
-  {
-    "title": "ATX PowerBoost VK‑C12B Tempered Glass RGB Fan Siyah Kasa (PSU yok)",
-    "link": "https://www.n11.com/urun/atx-powerboost-vk-c12b-tempered-glass-rgb-fan-siyah-kasa-psu-yok-3052867",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025-11-10T00:00:00"
-  },
-  {
-    "title": "Gigabyte Gaming A16 CTH‑24 i7‑13620H 24GB 512GB SSD 8GB RTX5050 16\" FreeDOS Dizüstü Bilgisayar",
-    "link": "https://www.n11.com/urun/gigabyte-gaming-a16-cth-24-i7-13620h-24-gb-512-gb-ssd-8-gb-rtx5050-16-free-dos-dizustu-bilgisayar-102657890",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025-11-10T00:00:00"
-  },
-  {
-    "title": "Gigabyte A620M‑H AMD A620 6400MHz OC DDR5 Soket AM5 mATX Anakart",
-    "link": "https://www.n11.com/urun/gigabyte-a620m-h-amd-a620-6400-mhz-oc-ddr5-soket-am5-matx-anakart-41504163",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025-11-10T00:00:00"
-  },
-  {
-    "title": "MSI B650 Gaming Plus WiFi AMD B650 7200MHz OC DDR5 Soket AM5 ATX Anakart",
-    "link": "https://www.n11.com/urun/msi-b650-gaming-plus-wifi-amd-b650-7200-mhz-oc-ddr5-soket-am5-atx-anakart-42755182",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025-11-10T00:00:00"
-  },
-  {
-    "title": "MSI A520M‑A PRO AMD A520 4600MHz OC DDR4 Soket AM4 mATX Anakart",
-    "link": "https://www.n11.com/urun/msi-a520m-a-pro-amd-a520-4600-mhz-oc-ddr4-soket-am4-matx-anakart-1573495",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025-11-10T00:00:00"
-  },
-  {
-    "title": "Patriot Viper Venom 16GB (1x16) DDR5‑6000MHz CL30 Gaming RAM",
-    "link": "https://www.n11.com/urun/patriot-pvv516g60c30-viper-venom-16-gb-1x16-gb-ddr5-6000-mhz-cl30-gaming-ram-65799260",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025-11-10T00:00:00"
-  },
-  {
-    "title": "Corsair Vengeance CMK32GX5M2E6000Z36‑32GB (2x16) DDR5‑6000MHz CL36 AMD RAM",
-    "link": "https://www.n11.com/urun/corsair-vengeance-cmk32gx5m2e6000z36-32-gb-2x16-gb-ddr5-6000-mhz-cl36-amd-ram-47164280",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025‑11‑10T00:00:00"
-  },
-  {
-    "title": "Corsair Vengeance RGB CMH32GX5M2B5600Z36K 32GB (2x16) DDR5‑5600MHz CL36 RAM",
-    "link": "https://www.n11.com/urun/corsair-vengeance-rgb-cmh32gx5m2b5600z36k-32-gb-2x16-5600-mhz-cl36-ram-29041775",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025-11-10T00:00:00"
-  },
-  {
-    "title": "ASUS TUF Gaming A16 FA608PP‑QT031 R9‑8940HX 32GB‑1TB SSD RTX5070‑16 Dizüstü Bilgisayar",
-    "link": "https://www.n11.com/urun/asus-tuf-gaming-a16-fa608pp-qt031-r9-8940hx-32-gb-1-tb-ssd-rtx-5070-16-dizustu-bilgisayar-84265551",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025-11-10T00:00:00"
-  },
-  {
-    "title": "HP Victus Gaming 15 FA2013NT‑BV7W9EA i7‑240H 16GB‑1TB SSD RTX5060 15.6\" W11H Dizüstü Bilgisayar",
-    "link": "https://www.n11.com/urun/hp-victus-gaming-15-fa2013nt-bv7w9ea-i7-240h-16-gb-1-tb-ssd-rtx5060-156-w11h-dizustu-bilgisayar-96592323",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025‑11‑10T00:00:00"
-  },
-  {
-    "title": "ASUS TUF Gaming F16 FX607VJ‑RL057 Core i5‑1210H 16GB‑512GB SSD RTX3050 FreeDOS Dizüstü Bilgisayar",
-    "link": "https://www.n11.com/urun/asus-tuf-gaming-f16-fx607vj-rl057-core-5-210h-16-gb-512gb-ssd-rtx3050-free-dos-dizustu-bilgisayar-97868197",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025‑11‑10T00:00:00"
-  },
-  {
-    "title": "Erazor Deputy P60 MD62684‑R32 i7‑12650H 32GB‑1TB SSD RTX4070 15.6\" FreeDOS Dizüstü Bilgisayar",
-    "link": "https://www.n11.com/urun/erazer-deputy-p60-md62684-r32-i7-12650h-32-gb-1-tb-ssd-rtx4070-156-free-dos-dizustu-bilgisayar-93838257",
-    "price": "Fiyat yükleniyor",
-    "updatedAt": "2025‑11‑10T00:00:00"
+    "price": 0,
+    "oldPrice": null,
+    "updatedAt": null
   }
 ]

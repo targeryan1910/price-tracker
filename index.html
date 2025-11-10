@@ -1,87 +1,54 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TeknoFiyat — Canlı Fiyat Takip</title>
+  <meta charset="UTF-8">
+  <title>İndirimli Ürünler</title>
   <style>
-    :root{
-      --blue:#cce9ff;
-      --dark:#0b0f17;
-      --card:#ffffff;
-      --muted:#667788;
-    }
-    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,var(--blue),#eef8ff);color:var(--dark);}
-    header{background:var(--dark);color:white;padding:20px 16px;text-align:center}
-    h1{margin:0;font-size:20px}
-    main{max-width:980px;margin:28px auto;padding:0 16px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-    .card{background:var(--card);border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(11,15,23,0.08);border-top:6px solid #0077d9}
-    .title{font-weight:700;margin-bottom:8px;font-size:15px;color:var(--dark)}
-    .link{display:block;color:#0077d9;text-decoration:none;margin-bottom:8px}
-    .price{font-weight:800;font-size:18px;color:var(--dark)}
-    .old{font-size:13px;color:var(--muted);text-decoration:line-through;margin-left:8px}
-    .updated{font-size:12px;color:var(--muted);margin-top:8px}
-    footer{max-width:980px;margin:30px auto 60px;text-align:center;color:var(--muted)}
-    @media (prefers-color-scheme:dark){
-      body{background:linear-gradient(180deg,#001524,#001a2b);color:var(--blue)}
-      header{background:#00111a}
-      .card{background:#07121a;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-      .link{color:var(--blue)}
-    }
+    body { font-family: Arial; padding: 20px; background: #f9f9f9; }
+    h1 { color: #333; }
+    .product { margin-bottom: 15px; padding: 10px; background: #fff; border-radius: 8px; box-shadow: 0 0 5px #ccc; }
+    .discount { color: red; font-weight: bold; margin-left: 10px; }
+    a { text-decoration: none; color: #0077cc; }
   </style>
 </head>
 <body>
-  <header><h1>TeknoFiyat — Gerçek Zamanlı Fiyat Takip</h1></header>
-
-  <main>
-    <div id="loading" style="text-align:center;margin:18px 0;color:var(--muted)">Veriler yükleniyor…</div>
-    <div id="grid" class="grid"></div>
-  </main>
-
-  <footer>Fiyatlar kaynağından otomatik çekilir — güncellemeler her 6 saatte bir gerçekleşir.</footer>
+  <h1>İndirimli Ürünler</h1>
+  <div id="products">Yükleniyor...</div>
 
   <script>
-    const RAW_JSON = 'https://raw.githubusercontent.com/targeryan1910/price-tracker/main/data.json';
+    // Apify Dataset ID ve API Token
+    const API_LINK = 'https://api.apify.com/v2/datasets/Xpb1OF32fG5o9SwQT/items?format=json&token=apify_api_JKHaJDasC04AiE7vxnowBWGsfvErBf0hBMPs';
 
-    async function load() {
-      const grid = document.getElementById('grid');
-      const loading = document.getElementById('loading');
+    async function loadProducts() {
       try {
-        const res = await fetch(RAW_JSON + '?cachebust=' + Date.now());
-        if (!res.ok) throw new Error('JSON alınamadı: ' + res.status);
+        const res = await fetch(API_LINK);
         const data = await res.json();
-        loading.style.display = 'none';
-        grid.innerHTML = '';
-        if (!Array.isArray(data) || data.length === 0) {
-          grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:var(--muted)">Henüz ürün yok veya veri alınamıyor.</div>';
+
+        const container = document.getElementById('products');
+        container.innerHTML = '';
+
+        if (data.length === 0) {
+          container.innerHTML = "Henüz ürün yok.";
           return;
         }
-        data.forEach(item => {
-          const el = document.createElement('div');
-          el.className = 'card';
-          const name = item.title || item.name || 'Bilinmeyen Ürün';
-          const link = item.link || item.url || '#';
-          const price = item.priceDisplay || item.price || 'Fiyat yok';
-          const old = item.oldPriceDisplay || item.oldPrice;
-          const updated = item.updatedAt ? new Date(item.updatedAt).toLocaleString() : null;
 
-          el.innerHTML = `
-            <div class="title">${name}</div>
-            <a class="link" href="${link}" target="_blank" rel="noopener noreferrer">${link}</a>
-            <div><span class="price">${price}</span>${ old ? `<span class="old">${old}</span>` : '' }</div>
-            ${ updated ? `<div class="updated">Son güncelleme: ${updated}</div>` : '' }
-          `;
-          grid.appendChild(el);
+        data.forEach(p => {
+          const div = document.createElement('div');
+          div.className = 'product';
+          let html = `<a href="${p.url}" target="_blank">${p.name}</a> → ${p.price} TL`;
+          if (p.discount) html += `<span class="discount">(İndirim: ${p.discount} TL)</span>`;
+          div.innerHTML = html;
+          container.appendChild(div);
         });
+
       } catch (err) {
-        loading.innerText = 'Veriler çekilemedi: ' + err.message;
-        console.error(err);
+        console.error('Veri çekilemedi!', err);
+        document.getElementById('products').innerHTML = "Veri çekilemedi!";
       }
     }
 
-    load();
-    setInterval(load, 60 * 1000);
+    loadProducts();
+    setInterval(loadProducts, 30000); // 30 saniyede bir güncelle
   </script>
 </body>
 </html>
