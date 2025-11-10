@@ -1,12 +1,13 @@
 {
   "name": "tech-price-tracker",
   "version": "1.0.0",
-  "description": "Gerçek zamanlı teknoloji fiyat takip sitesi",
+  "description": "",
   "main": "scraper.js",
   "scripts": {
-    "scrape": "node scraper.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "puppeteer": "^25.0.0"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
 }
