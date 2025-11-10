@@ -35,14 +35,13 @@
   <header><h1>TeknoFiyat — Gerçek Zamanlı Fiyat Takip</h1></header>
 
   <main>
-    <div id="loading" style="text-align:center;margin:18px 0;color:var(--muted)">Veriler yükleniyor… (ilk güncelleme 6 saatte bir yapılacak, manuel tetikleyebilirsin)</div>
+    <div id="loading" style="text-align:center;margin:18px 0;color:var(--muted)">Veriler yükleniyor…</div>
     <div id="grid" class="grid"></div>
   </main>
 
   <footer>Fiyatlar kaynağından otomatik çekilir — güncellemeler her 6 saatte bir gerçekleşir.</footer>
 
   <script>
-    // --- Senin GitHub kullanıcı adınla güncellendi ---
     const RAW_JSON = 'https://raw.githubusercontent.com/targeryan1910/price-tracker/main/data.json';
 
     async function load() {
@@ -82,7 +81,7 @@
     }
 
     load();
-    setInterval(load, 60 * 1000); // sayfa açıkken 1 dk aralıkla raw JSON'ı yeniler
+    setInterval(load, 60 * 1000);
   </script>
 </body>
 </html>
